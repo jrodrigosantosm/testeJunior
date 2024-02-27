@@ -9,7 +9,7 @@ CREATE DATABASE crud_test_junior
 
 -- Criação da tabela de clientes
 CREATE TABLE clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     telefone VARCHAR(20),
