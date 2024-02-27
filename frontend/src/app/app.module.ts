@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
