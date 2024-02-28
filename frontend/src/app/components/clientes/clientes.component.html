@@ -1,3 +1,7 @@
+<button type="button" class="btn btn-primary" (click)="adicionarCliente()">
+    Adicionar Cliente
+</button>
+
 <table class="table">
     <thead>
         <tr>
@@ -16,3 +20,36 @@
         </tr>
     </tbody>
 </table>
+
+<div class="modal fade" id="addClientModal" tabindex="-1" role="dialog" aria-labelledby="addClientModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addClientModalLabel">Adicionar Novo Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário para adicionar um novo cliente -->
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Nome</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Digite o nome do cliente">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail"
+                            placeholder="Digite o email do cliente">
+                    </div>
+                    <!-- Adicione mais campos conforme necessário -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar</button> <!-- Botão para salvar o cliente -->
+            </div>
+        </div>
+    </div>
+</div>

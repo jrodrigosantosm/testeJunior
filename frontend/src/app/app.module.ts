@@ -11,6 +11,7 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './components/clientes/ApiCliente.service';
+import { ModalClienteComponent } from './components/clientes/modal-cliente/modal-cliente.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +19,16 @@ import { ApiService } from './components/clientes/ApiCliente.service';
     NavComponent,
     ClientesComponent,
     ProdutosComponent,
-    PedidosComponent
+    PedidosComponent,
+    ModalClienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

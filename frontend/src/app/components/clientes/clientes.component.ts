@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from './ApiCliente.service';
+import { ModalClienteComponent } from './modal-cliente/modal-cliente.component';
+
 
 @Component({
   selector: 'app-clientes',
@@ -9,10 +11,18 @@ import { ApiService } from './ApiCliente.service';
 export class ClientesComponent {
   public clientes: any[] = [];
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+
+
+  ) { }
 
   ngOnInit(): void {
     this.getClientes();
+  }
+
+  adicionarCliente() {
+    console.log('cliente')
   }
 
   getClientes(): void {
