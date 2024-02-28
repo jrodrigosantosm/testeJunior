@@ -9,6 +9,8 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './components/clientes/ApiCliente.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
