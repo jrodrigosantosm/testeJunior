@@ -7,7 +7,7 @@ import { ApiService } from './ApiCliente.service';
   styleUrl: './clientes.component.scss'
 })
 export class ClientesComponent {
-  todos: any[] = [];
+  public clientes: any[] = [];
 
   constructor(private apiService: ApiService) { }
 
@@ -18,8 +18,8 @@ export class ClientesComponent {
   getClientes(): void {
     this.apiService.getTodos().subscribe(
       (response) => {
-        this.todos = response;
-        console.log(response)
+        this.clientes = response;
+        console.log(this.clientes)
       },
       (error) => {
         console.error('Error fetching todos:', error);
