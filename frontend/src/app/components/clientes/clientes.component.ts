@@ -26,8 +26,7 @@ export class ClientesComponent {
 
   adicionarCliente(): void {
     const dialogRef = this.dialog.open(ModalClienteComponent, {
-      width: '250px',
-      data: { name: 'John', animal: 'Dog' }
+      panelClass: 'custom-modal-dialog',
     });
 
     dialogRef.afterClosed().subscribe(result => {
