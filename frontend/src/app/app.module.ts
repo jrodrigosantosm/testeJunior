@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './components/clientes/ApiCliente.service';
 import { ModalClienteComponent } from './components/clientes/modal-cliente/modal-cliente.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ModalClienteComponent } from './components/clientes/modal-cliente/modal
     HttpClientModule,
 
   ],
-  providers: [ApiService],
+  providers: [ApiService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

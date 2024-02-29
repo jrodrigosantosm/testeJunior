@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { ApiService } from './ApiCliente.service';
 import { ModalClienteComponent } from './modal-cliente/modal-cliente.component';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+
 
 
 @Component({
@@ -13,6 +15,7 @@ export class ClientesComponent {
 
   constructor(
     private apiService: ApiService,
+    public dialog: MatDialog
 
 
   ) { }
@@ -21,8 +24,15 @@ export class ClientesComponent {
     this.getClientes();
   }
 
-  adicionarCliente() {
-    console.log('cliente')
+  adicionarCliente(): void {
+    const dialogRef = this.dialog.open(ModalClienteComponent, {
+      width: '250px',
+      data: { name: 'John', animal: 'Dog' }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   getClientes(): void {
