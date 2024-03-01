@@ -20,5 +20,11 @@ export class ApiService {
         return this.http.post<any>(`${this.apiUrl}cliente`, cliente);
     }
 
-    // Outros métodos para PUT, DELETE, etc. podem ser implementados da mesma forma
+    putCliente(cliente: any): Observable<any> {
+        return this.http.put<any>(`${this.apiUrl}cliente`, cliente);
+    }
+
+    deleteCliente(cliente: any): Observable<any> {
+        return this.http.delete<any>(`${this.apiUrl}cliente`, cliente);
+    }
 }

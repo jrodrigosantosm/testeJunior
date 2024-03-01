@@ -43,9 +43,6 @@ export class ModalClienteComponent {
         }
       );
       console.log(this.form)
-    } else {
-      // Caso algum campo obrigatório não tenha sido preenchido, podemos exibir uma mensagem de erro
-      console.error('Por favor, preencha todos os campos obrigatórios.');
     }
   }
 
