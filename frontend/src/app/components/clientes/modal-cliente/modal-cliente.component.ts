@@ -15,16 +15,27 @@ export class ModalClienteComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
-  adicionarUsuario(formValue: any): void {
-    this.usuario.nome = formValue.nome;
-    this.usuario.preco = formValue.preco;
-    this.usuario.estoque = formValue.estoque;
-    this.usuario.validade = formValue.validade;
-    this.usuario.perecivel = formValue.perecivel === 'Sim';
-
-    console.log('Novo usuario adicionado:', this.usuario);
-
-    // Remova esta linha para evitar que a modal seja fechada automaticamente
-    // this.dialogRef.close();
+  public form = {
+    nome: this.usuario.nome,
+    email: this.usuario.email,
+    telefone: this.usuario.telefone,
+    endereco: this.usuario.endereco
   }
+
+  adicionarUsuario() {
+    // Verifica se os campos obrigatórios foram preenchidos
+    if (this.usuario.nome && this.usuario.email && this.usuario.telefone && this.usuario.endereco) {
+      this.form = {
+        nome: this.usuario.nome,
+        email: this.usuario.email,
+        telefone: this.usuario.telefone,
+        endereco: this.usuario.endereco
+      }
+      console.log(this.form)
+    } else {
+      // Caso algum campo obrigatório não tenha sido preenchido, podemos exibir uma mensagem de erro
+      console.error('Por favor, preencha todos os campos obrigatórios.');
+    }
+  }
+
 }

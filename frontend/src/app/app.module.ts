@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './components/clientes/ApiCliente.service';
 import { ModalClienteComponent } from './components/clientes/modal-cliente/modal-cliente.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     NgbModule,
     RouterModule,
     HttpClientModule,
+    FormsModule
 
   ],
   providers: [ApiService, provideAnimationsAsync()],

@@ -16,8 +16,7 @@ export class ApiService {
         return this.http.get<any>(`${this.apiUrl}cliente`);
     }
 
-    // Exemplo de método para fazer uma requisição POST para a API
-    createTodo(todo: any): Observable<any> {
+    newCliente(todo: any): Observable<any> {
         return this.http.post<any>(`${this.apiUrl}/todos`, todo);
     }
 
