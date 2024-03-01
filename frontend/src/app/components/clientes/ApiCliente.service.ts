@@ -16,8 +16,8 @@ export class ApiService {
         return this.http.get<any>(`${this.apiUrl}cliente`);
     }
 
-    newCliente(todo: any): Observable<any> {
-        return this.http.post<any>(`${this.apiUrl}/todos`, todo);
+    newCliente(cliente: any): Observable<any> {
+        return this.http.post<any>(`${this.apiUrl}cliente`, cliente);
     }
 
     // Outros métodos para PUT, DELETE, etc. podem ser implementados da mesma forma
