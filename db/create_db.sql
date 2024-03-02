@@ -21,3 +21,16 @@ INSERT INTO clientes (nome, email, telefone, endereco) VALUES
 ('João Silva', 'joao@example.com', '(11) 1234-5678', 'Rua A, 123'),
 ('Maria Souza', 'maria@example.com', '(11) 9876-5432', 'Av. B, 456'),
 ('Carlos Santos', 'carlos@example.com', '(11) 5555-1234', 'Rua C, 789');
+
+-- Criar tabela de produtos
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    preco NUMERIC(10, 2) NOT NULL,
+    quantidade INTEGER NOT NULL
+);
+
+-- Inserir um novo produto
+INSERT INTO produtos (nome, descricao, preco, quantidade) 
+VALUES ('Produto A', 'Descrição do Produto A', 10.99, 100);
