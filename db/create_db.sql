@@ -34,3 +34,16 @@ CREATE TABLE produtos (
 -- Inserir um novo produto
 INSERT INTO produtos (nome, descricao, preco, quantidade) 
 VALUES ('Produto A', 'Descrição do Produto A', 10.99, 100);
+
+
+--tabela de compras--
+CREATE TABLE pedidos_compra (
+    id SERIAL PRIMARY KEY,
+    cliente VARCHAR(100) NOT NULL,
+    valor_total NUMERIC(10, 2) NOT NULL,
+    status VARCHAR(20) NOT NULL
+);
+
+-- Inserir um novo pedido de compra
+INSERT INTO pedidos_compra (cliente, valor_total, status) 
+VALUES ('Cliente A', 100.00, 'Em Aberto');
