@@ -4,13 +4,14 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cliente;
+use App\Models\Pedido;
 use Illuminate\Http\Request;
 
 class PedidosController extends Controller
 {
     public function index()
     {
-        return Cliente::all();
+        return Pedido::all();
     }
 
     public function store(Request $request)
