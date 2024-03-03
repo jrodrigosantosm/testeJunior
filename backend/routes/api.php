@@ -16,3 +16,9 @@ Route::post('/pedidos', [PedidosController::class, 'store'])->name('store');
 Route::delete('/pedidos/delete/{id}', [PedidosController::class, 'destroy'])->name('destroy');
 Route::get('/pedidos/{id}', [PedidosController::class, 'show'])->name('show');
 Route::put('/pedidos/{id}', [PedidosController::class, 'update'])->name('update');
+
+Route::get('/produtos', [PedidosController::class, 'index'])->name('index');
+Route::post('/produtos', [PedidosController::class, 'store'])->name('store');
+Route::delete('/produtos/delete/{id}', [PedidosController::class, 'destroy'])->name('destroy');
+Route::get('/produtos/{id}', [PedidosController::class, 'show'])->name('show');
+Route::put('/produtos/{id}', [PedidosController::class, 'update'])->name('update');
