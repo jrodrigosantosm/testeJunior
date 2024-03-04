@@ -10,7 +10,7 @@ class Produto extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['cliente', 'valor_total', 'status'];
+    protected $fillable = ['nome', 'descricao', 'preco', 'quantidade'];
 
     public static function createCliente(array $data)
     {

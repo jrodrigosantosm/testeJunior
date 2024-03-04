@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\ClienteController;
 use App\Http\Controllers\API\PedidosController;
+use App\Http\Controllers\API\ProdutosController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/cliente', [ClienteController::class, 'index'])->name('index');
@@ -17,8 +18,8 @@ Route::delete('/pedidos/delete/{id}', [PedidosController::class, 'destroy'])->na
 Route::get('/pedidos/{id}', [PedidosController::class, 'show'])->name('show');
 Route::put('/pedidos/{id}', [PedidosController::class, 'update'])->name('update');
 
-Route::get('/produtos', [PedidosController::class, 'index'])->name('index');
-Route::post('/produtos', [PedidosController::class, 'store'])->name('store');
-Route::delete('/produtos/delete/{id}', [PedidosController::class, 'destroy'])->name('destroy');
-Route::get('/produtos/{id}', [PedidosController::class, 'show'])->name('show');
-Route::put('/produtos/{id}', [PedidosController::class, 'update'])->name('update');
+Route::get('/produtos', [ProdutosController::class, 'index'])->name('index');
+Route::post('/produtos', [ProdutosController::class, 'store'])->name('store');
+Route::delete('/produtos/delete/{id}', [ProdutosController::class, 'destroy'])->name('destroy');
+Route::get('/produtos/{id}', [ProdutosController::class, 'show'])->name('show');
+Route::put('/produtos/{id}', [ProdutosController::class, 'update'])->name('update');
