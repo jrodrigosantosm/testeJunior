@@ -14,6 +14,7 @@ import { ApiService } from './components/clientes/ApiCliente.service';
 import { ModalClienteComponent } from './components/clientes/modal-cliente/modal-cliente.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FormsModule } from '@angular/forms';
+import { ModalProdutosComponent } from './components/produtos/modal-produtos/modal-produtos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     ClientesComponent,
     ProdutosComponent,
     PedidosComponent,
-    ModalClienteComponent
+    ModalClienteComponent,
+    ModalProdutosComponent
   ],
   imports: [
     BrowserModule,
